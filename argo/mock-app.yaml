@@ -1,0 +1,20 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: mock-app
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/ticusanvladutmb/argo-practice.git
+    targetRevision: mock-app
+    path: apps/mock-app
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: mock-app
+  syncPolicy:
+    automated:
+      prune: false
+      selfHeal: true
+    syncOptions:
+      - CreateNamespace=true

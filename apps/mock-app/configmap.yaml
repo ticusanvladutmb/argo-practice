@@ -1,0 +1,8 @@
+apiVersion: v1
+kind: ConfigMap
+metadata:
+  name: mock-app-config
+  labels:
+    app: mock-app
+data:
+  greeting: hello from git
