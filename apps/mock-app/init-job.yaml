@@ -14,4 +14,4 @@ spec:
       containers:
         - name: init
           image: nginx:1.27
-          command: ["sh", "-c", "echo init start; sleep 5; echo init failed; exit 1"]
+          command: ["sh", "-c", "echo init start; sleep 5; echo init done"]
